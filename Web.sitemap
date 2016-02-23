@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/" title="Root" description="Root">
+    <siteMapNode url="~/Default.aspx" title="Home" description="Dorkitech inicio" />
+    <siteMapNode url="~/Historial.aspx" title="Historial" description="Dorkitech escritorio de peticiones e incidencias" />
+    <siteMapNode url="~/Empleados.aspx" title="Directorio de empleados" description="Dorkitech datos de empleados" />
+    <siteMapNode url="~/Direcciones.aspx" title="Libreta de direcciones" description="Dorkitech libreta de direcciones" />
+    <siteMapNode url="~/Departamentos.aspx" title="Departamentos" description="Dorkitech Departamentos" />
+    <siteMapNode url="~/AdminTools.aspx" title="Administrador Toolbox" description="Control del administrador" />
+    <siteMapNode url="~/AdminNewsletter.aspx" title="Administrador Newsletter" description="Dorkitech noticias y eventos" />
+  </siteMapNode>
+</siteMap>
