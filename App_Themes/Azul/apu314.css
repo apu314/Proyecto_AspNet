@@ -1,4 +1,4 @@
-﻿@import url('normalize.css');
+﻿@import url('../../css/normalize.css');
 
 * {
     -moz-box-sizing: border-box;
@@ -16,6 +16,16 @@ body {
     flex-wrap: nowrap;
     font-family: Tahoma, Helvetica, Arial, sans-serif;
     font-size: 12px;
+}
+
+.asp-forms {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 
 h1 {
@@ -45,6 +55,13 @@ a:hover {
 }
 
 .container-imgLogo {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0 auto;
     height: 250px;
     max-width: 90%;
