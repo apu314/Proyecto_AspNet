@@ -28,12 +28,13 @@
                 <%# Eval("Text") %>
                 </StaticItemTemplate>
                 </asp:Menu>
+                <asp:Button ID="btnCerrarSesion" runat="server" Text="Cerrar sesión" />
             </div>
             <!-- Content -->
             <div class="content">
-            <asp:ContentPlaceHolder id="default"
-            runat="server" />
+            <asp:ContentPlaceHolder ID="default" runat="server" />
             </div>
+            <asp:ContentPlaceHolder ID="login" runat="server"></asp:ContentPlaceHolder>
         </main>
     </form>
 </body>
