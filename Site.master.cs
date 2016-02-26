@@ -16,10 +16,23 @@ public partial class Site : System.Web.UI.MasterPage
         //Obtengo el nombre del fichero de la página que se está cargando actualmente.
         string[] file = Request.CurrentExecutionFilePath.Split('/');
         string fileName = file[file.Length - 1];
-
-        if (Session.SessionID == null && fileName != "Login.aspx")
+        /*
+        if (!Response.Cookies["ASP.NET_SessionId"] && !Response.Cookies[".ASPXAUTH"])
         {
             Response.Redirect("Login.aspx");
-        }
+        }*/
+    }
+
+    protected void btnCerrarSesion_Click(object sender, EventArgs e)
+    {
+        //borramos las cookies de autentificación (.ASPXAUTH) y de sesión (ASP:NET_Sessionid).
+        Session.Abandon();
+        var cookieSesion = new HttpCookie("ASP.NET_SessionId");
+        cookieSesion.Expires = DateTime.Now.AddDays(-1);
+        var cookieAutentificacion = new HttpCookie(".ASPXAUTH");
+        cookieAutentificacion.Expires = DateTime.Now.AddDays(-1);
+        Response.Cookies.Add(cookieAutentificacion);
+        //Response.Cookies[".ASPXAUTH"];
+        Response.Redirect("Login.aspx");
     }
 }

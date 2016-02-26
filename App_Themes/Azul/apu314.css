@@ -90,8 +90,14 @@ main {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+    flex-direction: column;
     width: 33.333%;
 }
+
+    .main-menu--boton {
+        width: 50%;
+        margin: 0 auto;
+    }
 
 .content {
     display: -webkit-box;

@@ -28,7 +28,7 @@
                 <%# Eval("Text") %>
                 </StaticItemTemplate>
                 </asp:Menu>
-                <asp:Button ID="btnCerrarSesion" runat="server" Text="Cerrar sesión" />
+                <asp:Button ID="btnCerrarSesion" runat="server" Text="Cerrar sesión" CssClass="main-menu--boton" OnClick="btnCerrarSesion_Click" />
             </div>
             <!-- Content -->
             <div class="content">
