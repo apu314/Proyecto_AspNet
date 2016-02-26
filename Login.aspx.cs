@@ -13,9 +13,9 @@ public partial class Login : System.Web.UI.Page
 
     }
 
-    protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
+    protected void validaUsuario(object sender, AuthenticateEventArgs e)
     {
-        if (Autentificacion.Autenticar(Login1.UserName, Login1.Password))
+        if (FormsAuthentication.Authenticate(Login1.UserName, Login1.Password) || autentificacion.autenticar(Login1.UserName, Login1.Password))
         {
             FormsAuthentication.RedirectFromLoginPage(Login1.UserName, Login1.RememberMeSet);
         }

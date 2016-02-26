@@ -6,16 +6,16 @@ using System.Data.SqlClient;
 using System.Configuration;
 
 /// <summary>
-/// Clase que se encargará de autentificar a los usuarios.
+/// Verificación para la autentificación de usuarios en al base de datos.
 /// </summary>
-public class Autentificacion
+public class autentificacion
 {
-    public static bool Autenticar(string usuario, string password)
+    public static bool autenticar(string usuario, string password)
     {
         //Consulta a la base de datos.
         string sql = @"SELECT COUNT(*) FROM Empleados Where Username = @Username AND Password = @Password";
         //Cadena de conexión.
-        using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["EmpresadbConnectionStringLogin"].ToString()))
+        using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Empresadb"].ToString()))
         {
             //Abrimos la conexión.
             conn.Open();
@@ -26,6 +26,7 @@ public class Autentificacion
             cmd.Parameters.AddWithValue("@Password", password);
             //Devuelve la fila afectada
             int count = Convert.ToInt32(cmd.ExecuteScalar());
+            //si es cero no valida porque no existe el usuario. Caso contrario si valida.
             if (count == 0)
                 return false;
             else

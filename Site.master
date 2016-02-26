@@ -32,9 +32,9 @@
             </div>
             <!-- Content -->
             <div class="content">
-            <asp:ContentPlaceHolder ID="default" runat="server" />
+                <asp:ContentPlaceHolder ID="default" runat="server" />
+                <asp:ContentPlaceHolder ID="login" runat="server"></asp:ContentPlaceHolder>
             </div>
-            <asp:ContentPlaceHolder ID="login" runat="server"></asp:ContentPlaceHolder>
         </main>
     </form>
 </body>
