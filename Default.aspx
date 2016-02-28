@@ -4,8 +4,12 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="default" Runat="Server">
     <h1>Empresas colaboradoras</h1>
-    <p>---RESEERVADO---</p>
+    <div>
+        
+    </div>
     <h1>Eventos y Noticias</h1>
-    <p>---RESEERVADO---</p>
+    <div>
+        <asp:AdRotator ID="AdRotator1" runat="server" DataSourceID="XmlDataSourceAdRotator" />
+        <asp:XmlDataSource ID="XmlDataSourceAdRotator" runat="server" DataFile="~/AdRotator.xml"></asp:XmlDataSource>
+    </div>
 </asp:Content>
-

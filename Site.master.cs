@@ -16,11 +16,6 @@ public partial class Site : System.Web.UI.MasterPage
         //Obtengo el nombre del fichero de la página que se está cargando actualmente.
         string[] file = Request.CurrentExecutionFilePath.Split('/');
         string fileName = file[file.Length - 1];
-        /*
-        if (!Response.Cookies["ASP.NET_SessionId"] && !Response.Cookies[".ASPXAUTH"])
-        {
-            Response.Redirect("Login.aspx");
-        }*/
     }
 
     protected void btnCerrarSesion_Click(object sender, EventArgs e)
