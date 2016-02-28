@@ -15,6 +15,12 @@ public partial class Login : System.Web.UI.Page
 
     protected void validaUsuario(object sender, AuthenticateEventArgs e)
     {
+        if (Login1.UserName == "administrador" && Login1.Password == "administrador")
+        {
+            //Creo la cookie para administrador.
+            HttpCookie cookieAdministrador = new HttpCookie("administrador", "1");
+            HttpContext.Current.Response.Cookies.Add(cookieAdministrador);
+        }
         if (FormsAuthentication.Authenticate(Login1.UserName, Login1.Password) || autentificacion.autenticar(Login1.UserName, Login1.Password))
         {
             FormsAuthentication.RedirectFromLoginPage(Login1.UserName, Login1.RememberMeSet);
