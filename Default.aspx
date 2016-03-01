@@ -9,7 +9,7 @@
     </div>
     <h1>Eventos y Noticias</h1>
     <div>
-        <asp:AdRotator ID="AdRotator1" runat="server" DataSourceID="XmlDataSourceAdRotator" />
+        <asp:AdRotator ID="AdRotator1" runat="server" DataSourceID="XmlDataSourceAdRotator" CssClass="col-xs-8" />
         <asp:XmlDataSource ID="XmlDataSourceAdRotator" runat="server" DataFile="~/AdRotator.xml"></asp:XmlDataSource>
     </div>
 </asp:Content>

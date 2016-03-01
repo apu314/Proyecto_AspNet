@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="login" Runat="Server">
     <div class="row">
         <h1>Login</h1>
-        <asp:Login ID="Login1" runat="server" OnAuthenticate= "validaUsuario" BorderStyle="Solid" BorderWidth="1px">
+        <asp:Login ID="Login1" runat="server" OnAuthenticate="validaUsuario" BorderStyle="None" RenderOuterTable="True" ClientIDMode="AutoID">
             <LayoutTemplate>
                 <table cellspacing="0" cellpadding="1" style="border-collapse: collapse;">
                     <tr>

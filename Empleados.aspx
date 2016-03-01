@@ -4,6 +4,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="default" Runat="Server">
     <h1>Directorio de empleados</h1>
-    <asp:Label ID="empleados" runat="server"></asp:Label>
+    <asp:Label ID="empleados" runat="server" CssClass="col-lg-4 control-label"></asp:Label>
 </asp:Content>
 

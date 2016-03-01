@@ -27,7 +27,7 @@
     <form id="form1" runat="server">
         <div class="row">
             <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-                <div class="container">
+                <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ctl00_Menu">
@@ -61,35 +61,31 @@
         </div>
 
         <!-- Header -->
-        <div class="row">
+        <div class="row-fluid">
             <header class="image-bg-fluid-height">
                 <asp:Image ID="Image1" runat="server" ImageUrl="~/img/portada.png" AlternateText="intranet oficial de apu314.com" CssClass="img-responsive  img-center" />
             </header>
             <section>
-                <!-- Menu -->
-                <div class="container-fluid">
+                <div class="container">
                     <div class="row">
-                        <div class="col-xs-12 col-lg-12">
-                            <div class="col-xs-12 col-md-4 col-lg-4">
-                                <div class="col-xs-11">
-                                    <asp:SiteMapDataSource ID="apu314SiteMap" runat="server" ShowStartingNode="false" />
-                                    <asp:Menu ID="apu314Menu" runat="server" DataSourceID="apu314SiteMap" RenderingMode="List">
-                                        <StaticItemTemplate>
-                                            <img src="img/book_closed.png" alt="+" width="16" height="16" style="border-width: 0;" />
-                                            <%# Eval("Text") %>
-                                        </StaticItemTemplate>
-                                    </asp:Menu>
-                                </div>
-                                <div class="col-xs-11">
-                                    <asp:Button ID="btnCerrarSesion" runat="server" Text="Cerrar sesión" CssClass="btn btn-danger btn-xs" OnClick="btnCerrarSesion_Click" />
-                                </div>
+                        <!-- Contenido -->
+                        <div class="col-md-9 col-md-push-3">
+                            <asp:ContentPlaceHolder ID="default" runat="server" />
+                            <asp:ContentPlaceHolder ID="login" runat="server"></asp:ContentPlaceHolder>
+                        </div>
+                        <!-- Navegación -->
+                        <div class="col-md-3 col-md-pull-9">
+                            <div class="col-xs-12  col-sm-12  col-md-12  col-lg-12">
+                                <asp:SiteMapDataSource ID="apu314SiteMap" runat="server" ShowStartingNode="false" />
+                                <asp:Menu ID="apu314Menu" runat="server" CssClass="col-xs-6  col-xs-offset-3  col-sm-6  col-sm-offset-3  col-md-3 col-md-offset-0  col-lg-12" DataSourceID="apu314SiteMap" RenderingMode="List">
+                                    <StaticItemTemplate>
+                                        <img src="img/book_closed.png" alt="+" width="16" height="16" style="border-width: 0;" />
+                                        <%# Eval("Text") %>
+                                    </StaticItemTemplate>
+                                </asp:Menu>
                             </div>
-                            <!-- Content -->
-                            <div class="col-xs-12 col-md-6 col-lg-7">
-                                <div class="col-xs-6 col-md-11 col-lg-11 center-block">
-                                    <asp:ContentPlaceHolder ID="default" runat="server" />
-                                    <asp:ContentPlaceHolder ID="login" runat="server"></asp:ContentPlaceHolder>
-                                </div>
+                            <div class="col-xs-2  col-xs-offset-4"><!-- Para las demás dimensiones se mantiene igual ya que bootstrap es Mobile First -->
+                                <asp:Button ID="btnCerrarSesion" runat="server" Text="Cerrar sesión" CssClass="btn btn-danger btn-xs" OnClick="btnCerrarSesion_Click" />
                             </div>
                         </div>
                     </div>
